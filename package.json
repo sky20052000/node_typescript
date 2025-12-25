@@ -1,0 +1,29 @@
+{
+  "name": "node_typescipt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env dist/server.js ",
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Shashikant Yadav",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/pg": "^8.16.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  }
+}

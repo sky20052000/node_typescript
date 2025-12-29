@@ -17,6 +17,7 @@ interface Config {
   CLOUD_NAME: string;
   API_KEY: string;
   API_SECRET: string;
+  NODE_ENV:string;
 }
 
 const _config: Record<keyof Config, string | undefined> = {
@@ -37,6 +38,7 @@ const _config: Record<keyof Config, string | undefined> = {
   CLOUD_NAME: process.env.CLOUD_NAME,
   API_KEY: process.env.API_KEY,
   API_SECRET: process.env.API_SECRET,
+  NODE_ENV:process.env.NODE_ENV,
 };
 export const config = {
   get<K extends keyof Config>(key: K): Config[K] {

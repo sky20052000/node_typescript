@@ -9,8 +9,8 @@ export const pool = new Pool({
   password:config.get('DATABASE_PASSWORD'),
   port:config.get('DATABASE_PORT'),
   max: 20, 
-  idleTimeoutMillis:30000,
-  connectionTimeoutMillis: 60000 ,
+  // idleTimeoutMillis:30000,
+  // connectionTimeoutMillis: 60000 ,
   ssl: {
     rejectUnauthorized: false,
   }

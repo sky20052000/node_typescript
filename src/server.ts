@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import cluster from 'node:cluster';
 import os from 'node:os';
 import { config } from './config/config.js';
-
+import userRouter from "./routes/userRoutes.js"
 const app = express();
 
 const totalCPUs = os.availableParallelism();
@@ -62,6 +62,8 @@ if (cluster.isPrimary) {
   );
 
   app.use(cookieParser());
+
+app.use("/api/user/", userRouter);
 
   // Test route
   app.get('/', (_req: Request, res: Response) => {
